@@ -1,6 +1,20 @@
 # applets
 这是一个小程序
 
+该项目使用了mpVue框架,使用flyio发起网络请求
+
+安装flyio
+```
+npm install flyio --save
+```
+
+在mpvue 中您也可以将fly实例挂在vue原型上，这样就可以在任何组件中通过this方便的调用：
+```
+var Fly=require("flyio/dist/npm/wx") 
+var fly=new Fly
+... //添加全局配置、拦截器等
+Vue.prototype.$http=fly //将fly实例挂在vue原型上
+```
 
 创建一个基于 mpvue-quickstart 模板的新项目
 ```
