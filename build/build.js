@@ -1,7 +1,6 @@
 require('./check-versions')()
 
 process.env.NODE_ENV = 'production'
-process.env.PLATFORM = process.argv[process.argv.length - 1] || 'wx'
 
 var ora = require('ora')
 var rm = require('rimraf')
@@ -14,7 +13,7 @@ var webpackConfig = require('./webpack.prod.conf')
 var spinner = ora('building for production...')
 spinner.start()
 
-rm(path.join(config.build.assetsRoot, '*'), err => {
+rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
   if (err) throw err
   webpack(webpackConfig, function (err, stats) {
     spinner.stop()

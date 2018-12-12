@@ -1,21 +1,21 @@
+import Vue from 'vue'
 const state = {
-  question: "最好别惹我"
+  question:'最好别惹我'
 }
 
-const mutations = {
-  updatequestion(state, question) {
-    const obj = state;
-    obj.question = question;
-  }
+const mutations= {
+  updatequestion (state, question) {
+    const obj = state
+    obj.question= question
+}
 }
 
 const actions = {
-  updatequestion({
-    commit
-  }) {
+  updatequestion ({commit}) {
     commit('updatequestion')
   }
 }
+
 export default {
   namespaced: true,
   state,
