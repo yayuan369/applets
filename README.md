@@ -1,5 +1,5 @@
 # applets
-这是一个小程序
+这是一个小程序 与mpvue结合开发的小程序
 
 创建一个基于 mpvue-quickstart 模板的新项目
 ```
